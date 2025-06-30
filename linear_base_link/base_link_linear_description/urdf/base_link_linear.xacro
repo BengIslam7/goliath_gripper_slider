@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<robot name="base_link_linear" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find base_link_linear_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find base_link_linear_description)/urdf/base_link_linear.trans" />
+<xacro:include filename="$(find base_link_linear_description)/urdf/base_link_linear.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0005821337173981269 0.003590015784231563 0.02023659657573182" rpy="0 0 0"/>
+    <mass value="8.757773116770874"/>
+    <inertia ixx="1.058645" iyy="0.075511" izz="1.131598" ixy="2.7e-05" iyz="0.000241" ixz="-8.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver1"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="block4_1">
+  <inertial>
+    <origin xyz="0.026412832343615356 -0.26974632633557555 0.044172667934380634" rpy="0 0 0"/>
+    <mass value="0.31187716641464713"/>
+    <inertia ixx="9.5e-05" iyy="0.000104" izz="0.000134" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.144716 -0.150007 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver1"/>
+  </visual>
+  <collision>
+    <origin xyz="0.144716 -0.150007 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="block1_1">
+  <inertial>
+    <origin xyz="-0.02708729840770817 -0.26974632633557555 0.04417266793438055" rpy="0 0 0"/>
+    <mass value="0.31187716641464713"/>
+    <inertia ixx="9.5e-05" iyy="0.000104" izz="0.000134" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.149489 -0.150007 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.149489 -0.150007 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rail_2_v1_1">
+  <inertial>
+    <origin xyz="-1.3421247573031092e-07 -0.5000000436520409 1.490116086078075e-10" rpy="0 0 0"/>
+    <mass value="2.466150233067987"/>
+    <inertia ixx="0.205574" iyy="0.000123" izz="0.205574" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.122356 -0.498326 -0.058" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/rail_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.122356 -0.498326 -0.058" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/rail_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rail_1_v1_1">
+  <inertial>
+    <origin xyz="-1.3421247570255534e-07 -0.5000000436520409 1.490116086078075e-10" rpy="0 0 0"/>
+    <mass value="2.466150233067987"/>
+    <inertia ixx="0.205574" iyy="0.000123" izz="0.205574" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.117644 -0.498326 -0.058" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/rail_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel"/>
+  </visual>
+  <collision>
+    <origin xyz="0.117644 -0.498326 -0.058" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/rail_1_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="platform_v2_1">
+  <inertial>
+    <origin xyz="-0.002400134212475728 1.3912482277333992e-17 0.07" rpy="0 0 0"/>
+    <mass value="27.665936445492147"/>
+    <inertia ixx="0.210463" iyy="0.203244" izz="0.40633" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002356 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/platform_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002356 -0.0 -0.03" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/platform_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="block3_1">
+  <inertial>
+    <origin xyz="-0.02708729840770817 0.2747113263355756 0.04417266793438055" rpy="0 0 0"/>
+    <mass value="0.31187716641464713"/>
+    <inertia ixx="9.5e-05" iyy="0.000104" izz="0.000134" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.149489 0.149472 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver1"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.149489 0.149472 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="block2_1">
+  <inertial>
+    <origin xyz="0.026391835320814905 0.2747113263355756 0.04417266793438073" rpy="0 0 0"/>
+    <mass value="0.31187716641464713"/>
+    <inertia ixx="9.5e-05" iyy="0.000104" izz="0.000134" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.144716 0.149472 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver1"/>
+  </visual>
+  <collision>
+    <origin xyz="0.144716 0.149472 -0.022279" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find base_link_linear_description)/meshes/block2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+<joint name="Rigid 4" type="fixed">
+  <origin xyz="-0.147072 0.150007 -0.007721" rpy="0 0 0"/>
+  <parent link="platform_v2_1"/>
+  <child link="block4_1"/>
+</joint>
+
+<joint name="Rigid 6" type="fixed">
+  <origin xyz="0.147133 0.150007 -0.007721" rpy="0 0 0"/>
+  <parent link="platform_v2_1"/>
+  <child link="block1_1"/>
+</joint>
+
+<joint name="Rigid 8" type="fixed">
+  <origin xyz="0.122356 0.498326 0.058" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rail_2_v1_1"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="-0.117644 0.498326 0.058" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rail_1_v1_1"/>
+</joint>
+
+<joint name="Slider 11" type="prismatic">
+  <origin xyz="0.002356 0.0 0.03" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="platform_v2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="0.34" lower="-0.35" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Rigid 12" type="fixed">
+  <origin xyz="0.147133 -0.149472 -0.007721" rpy="0 0 0"/>
+  <parent link="platform_v2_1"/>
+  <child link="block3_1"/>
+</joint>
+
+<joint name="Rigid 13" type="fixed">
+  <origin xyz="-0.147072 -0.149472 -0.007721" rpy="0 0 0"/>
+  <parent link="platform_v2_1"/>
+  <child link="block2_1"/>
+</joint>
+
+</robot>
